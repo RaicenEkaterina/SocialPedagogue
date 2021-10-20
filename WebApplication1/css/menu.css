@@ -1,0 +1,75 @@
+﻿body
+{
+    background-image: url();
+}
+
+ul {
+    /*элемент ul список*/
+    list-style: none; /*задаем стиль отображения маркеров или нумерации для элементов списка - отобразить без маркера*/
+    margin: 0; /*внешние отступы все 0*/
+    padding: 0; /*внутренние отступы все 0*/
+}
+
+#menu {
+    /*элемент с идентификатором menu*/
+    font-weight: bold; /*насыщенность шрифта - стандартный полужирный шрифт (значение = 700)*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif; /*шрифт*/
+    text-decoration: none; /*подчеркивание отсутствует*/
+    font-size: 90%; /*размер шрифта - относительно размера шрифта родителя в CSS-единицах (у нас в %)*/
+}
+
+    #menu li {
+        /*элемент li элемента с индификатором menu*/
+        height: 37px; /*высота*/
+    }
+
+        #menu li a:link, #menu li a:visited {
+            /*ссылка элемента li элемента с индификатором menu*/
+            text-decoration: none; /*подчеркивание отсутствует*/
+            color: #000000; /*цвет*/
+            display: block; /*блочный элемент - элементы начинаются с новой строки, после элемента также добавляются перенос строки*/
+            background: url() 0 0 no-repeat; /*фоновое изображение и путь к изображению, не повторять, отобразить картинку слева сверху*/
+            padding: 10px 0 10px 10px; /*внутренние отступы все сверху, справа, снизу, слева*/
+        }
+
+        #menu li a:hover, #menu li.current a {
+            /*ссылка элемента li элемента с идентификатором menu при наведении курсора, ссылка элемента li с классом current элемента с идентификатором current*/
+            color: #ff00dc; /*цвет*/
+            background: url() 0 -37px no-repeat; /*фоновое изображение и путь к изображению, не повторять, отобразить картинку по горизонтали с 0, по вертикали с -37px т.е. нижнюю часть*/
+            padding: 10px 0 10px 15px; /*внутренние отступы все сверху, справа, снизу, слева (тут 15 для эффекта смещения самой ссылки)*/
+        }
+
+/*Подменю*/
+.menu_list {
+    position: relative;
+}
+
+.menu_drop {
+    position: absolute;
+    width: 100%;
+    left: 100%;
+    border-left: 10px solid transparent;
+    top: -9999px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.menu_list:hover .menu_drop {
+    opacity: 1;
+    top: 0;
+}
+
+/*треугольнички*/
+.menu_list::after {
+    content: " ";
+    position: absolute;
+    border: 5px solid;
+    border-color: transparent transparent transparent #000000;
+    top: 1em;
+    right: 0.7em;
+    transition: all 0.5s ease;
+}
+
+.menu_list:hover::after {
+    transform: scaleX(-1);
+}

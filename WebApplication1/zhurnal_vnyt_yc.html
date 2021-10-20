@@ -1,0 +1,265 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="js/RrgisterCustomer4.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://resources/demos/style.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+
+    <link rel="stylesheet" href="css/menu.css" type="text/css" />
+    <title>Журнал2</title>
+</head>
+<body>
+    <table align="center" rules="rows" style="width:100%">
+        <!--Создаем строку-->
+        <tr>
+            <!--Создаем ячейку строки-->
+            <td>
+                <!--Шапак страницы-->
+                <table background="" bgcolor="E0FFFF" cellpadding="10" style="width:100%; border-radius:5px;">
+                    <!--Создаем строку таблицы-->
+                    <tr>
+                        <!--Создаем столбец страницы-->
+                        <th>
+                            <!--Содержание ячейки столбца-->
+                            <h1>
+                                Журнал учета обучающихся, состоящих на внутренем контроле
+                            </h1>
+                            <!--Закрываем таблицу-->
+                        </th>
+                    </tr>
+                </table>
+
+                <table bgcolor="E6E6FA" cellpadding="10" style="width:100%; border-radius:5px">
+                    <!--Создаем строку-->
+                    <tr>
+                        <style type="text/css">
+                        </style>
+                        <!--Создаем столбес с меню-->
+                        <td bgcolor="FAF0E6">
+                            <h2>
+                                Меню
+                            </h2>
+                            <!--Абзац для ссылки на страницу сайта-->
+                            <div id="menu">
+                                <ul>
+                                    <li>
+                                        <a href="Glavnay.html">
+                                            <span>
+                                                Главная страница
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="menu_list">
+                                        <a href="#">
+                                            <span style="margin-left:5px;">
+                                                Базы данных
+                                            </span>
+                                        </a>
+                                        <ul class="menu_drop">
+                                            <li>
+                                                <a href="BD_ych.html">
+                                                    База данных о учащихся
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="BD_rod.html">
+                                                    База данных о родителях
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu_list">
+                                        <a href="#">
+                                            <span style="margin-left:5px;">
+                                                Учет деятельности
+                                            </span>
+                                        </a>
+                                        <ul class="menu_drop">
+                                            <li>
+                                                <a href="zhurnal_IDN.html">
+                                                    Журнал учета обучающихся, состоящих на учете в ИДН
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="zhurnal_vnyt_yc.html">
+                                                    Журнал учета обучающихся, состоящих на внутренем контроле
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="zhurnal_SOP.html">
+                                                    Журнал учета семей, находящихся в СОП
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="zhurnal_indiv_rab.html">
+                                                    Журнал учета индивидуальной работы с обучающиимся
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="zhurnal_gryp_risk.html">
+                                                    Журнал учета обучающихся, состоящих на учете в "группа риска"
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="Norm_doc.html">
+                                            <span style="margin-left:5px;">
+                                                Нормативные документы
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <span style="margin-left:5px;">
+                                                Документация
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="menu_list">
+                                        <a href="#">
+                                            <span style="margin-left:5px;">
+                                                Памятки
+                                            </span>
+                                        </a>
+                                        <ul class="menu_drop">
+                                            <li>
+                                                <a href="Pamytki1.html">
+                                                    Памятки для социального педагога
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="Pamytki.html">
+                                                    Памятки для родителей
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--Закраваем обзац-->
+                            <!--Создаем ячейку-->
+                        <td>
+
+                            <form id="frmRegister">
+                                <div style="width: 400px; padding-left: 50px; padding-top: 20px">
+                                    <h3>
+                                        Добавление
+                                    </h3>
+                                    <div>
+                                        <label for="txtID">
+                                            ID
+                                        </label>
+                                        <input type="text" id="txtID" class="form-control" required />
+                                    </div>
+                                    <br />
+                                    <div>
+                                        <label for="txtgod">
+                                            Год постановки на учет
+                                        </label>
+                                        <input type="text" id="txtgod" class="form-control" required />
+                                    </div>
+                                    <br />
+                                    <div>
+                                        <label for="txtdata">
+                                            Дата постановки на учет
+                                        </label>
+                                        <input type="text" id="txtdata" class="form-control" required />
+                                    </div>
+                                    <br />
+                                    <div>
+                                        <label for="txtFIO">
+                                            ФИО учащегося
+                                        </label>
+                                        <input type="text" id="txtFIO" class="form-control" required />
+                                    </div>
+                                    <br />
+                                    <div>
+                                        <label for="datepicker">
+                                            Дата рождения
+                                        </label>
+                                        <input type="date" id="datepicker" class="form-control" required />
+                                    </div>
+                                    <br />
+                                    <div>
+                                        <label for="txtsved">
+                                            Сведенья о родителях
+                                        </label>
+                                        <input type="text" id="txtsved" class="form-control" required />
+                                    </div>
+                                    <br />
+                                    <div>
+                                        <label for="txtprich">
+                                            Причина постановки на отчет
+                                        </label>
+                                        <input type="text" id="txtprim" class="form-control" required />
+                                    </div>
+                                    <div>
+                                        <label for="txtdat">
+                                            Дата снятия с учета
+                                        </label>
+                                        <input type="date" id="txtdat" class="form-control" required />
+                                    </div>
+
+                                    <br />
+                                    <div>
+                                        <input type="submit" value="Сохранить" id="btnSave" class="btn btn-primary" />
+                                    </div>
+                                </div>
+                            </form>
+
+                            <div style="width: 900px; padding-left: 50px; padding-top: 10px">
+                                <div style="float: left; width: 100px">
+                                    <label for="txtSearch">
+                                        Поиск
+                                    </label>
+                                </div>
+
+                                <div style="float:left; width: 650px">
+                                    <input type="text" id="txtSearch" class="form-control" />
+                                </div>
+
+                                <div style="float:left; width: 100px">
+                                    <input type="button" value="Поиск" id="btnSearch" class="btn btn-primary" />
+                                </div>
+                            </div>
+
+                            <br /> <br />
+
+                            <div style="width:900px; padding-left:50px;padding-top:10px">
+                                <table id="tblList"></table>
+                            </div>
+
+                        </td>
+                    </tr>
+
+                </table>
+
+                <!--Подвал-->
+                <!--Создаем таблицу подвал-->
+                <table bgcolor="7FFD4" height="20" cellpadding="10" style="width:100%; border-radius:5px">
+                    <!--Создаем строку-->
+                    <tr>
+                        <th>
+                            <h3>
+                                г. Минск, 2021
+                            </h3>
+                            <!--Закоываем таблицу подвал-->
+                        </th>
+                    </tr>
+                </table>
+                <!--Закрываем таблицу контейнера-->
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
